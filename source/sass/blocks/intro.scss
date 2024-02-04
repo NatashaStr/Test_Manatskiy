@@ -1,0 +1,206 @@
+.intro {
+  padding-bottom: 99px;
+
+  &__title {
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    font-size: 42px;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+  }
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    padding: 60px 0 60px;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    max-width: 334px;
+    min-height: 592px;
+    padding: 38px 60px 53px;
+    border-radius: 11.354px;
+    background: #6A994E;
+    box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    transition: margin $trans-default;
+    position: relative;
+    transform: translateZ(0);
+
+    @include hover {
+      background: #1D252B;
+      box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.15);
+      margin-top: -30px;
+      margin-left: -30px;
+      margin-right: -30px;
+      z-index: 2;
+    }
+
+    @include vp-1279 {
+      padding: 30px 40px 30px;
+    }
+  }
+
+  &__cards-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 0 100px;
+
+    @include vp-1279 {
+      padding: 0 40px;
+    }
+  }
+
+  &__card-title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 18px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  &__card-price-wrapper {
+    position: relative;
+    display: flex;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    opacity: 0;
+    transition: opacity ease 2s;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      bottom: 0;
+      left: 0;
+      background-color: $color-default-white;
+    }
+  }
+
+  &__card-currency {
+    top: -0.2em;
+    font-size: 11.354px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 128.023%;
+  }
+
+  &__card-sum {
+    font-size: 37.848px;
+    font-weight: 800;
+    margin-right: 7px;
+    line-height: 106%;
+  }
+
+  &__card-period {
+    align-self: end;
+  }
+
+  &__card-description {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    padding-bottom: 27px;
+    margin-bottom: 24px;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: calc(100% + 120px);
+      height: 1px;
+      bottom: 0;
+      left: -60px;
+      background-color: $color-default-white;
+
+      @include vp-1279 {
+        width: calc(100% + 80px);
+        left: -40px;
+      }
+    }
+  }
+
+  &__card-text-feature {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 14px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  &__card-feature-title {
+    margin: 0;
+    margin-bottom: 24px;
+    padding: 0;
+    font-size: 13.247px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  &__card-list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__card-item {
+    position: relative;
+    padding-left: 16px;
+    font-weight: 500;
+    margin-bottom: 15px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 10px;
+      height: 6px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url("../../img/svg/item-tick.svg");
+    }
+  }
+
+  &__card-item:last-child {
+    margin-bottom: 0;
+  }
+
+  &__card-btn {
+    width: 100%;
+    margin-top: auto;
+    padding: 12px 24px;
+    color: $color-default-white;
+    border-radius: 7px;
+    border: 0.864px solid #D0D0D0;
+    background: #6A994E;
+    box-shadow: 0px 6px 14px 0px rgba(0, 0, 0, 0.10);
+    cursor: pointer;
+  }
+}
+
+[data-checked = "is-active"] {
+  background-color: #BC4749;
+}
+
+// [data-card = "is-active"]  {
+//   background: #1D252B;
+//   box-shadow: 0px 3.785px 94.621px 0px rgba(0, 0, 0, 0.15);
+//   margin-top: -30px;
+//   margin-left: -30px;
+//   margin-right: -30px;
+//   z-index: 2;
+// }
